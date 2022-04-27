@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+        <title>끝말잇기</title>
+    </head>
+
+    <body>
+
+        <div><span id="order">1</span>번째 참가자</div>
+        <div>제시어: <span id="word"></span></div>
+        <input type="text">
+        <button>입력</button>
+
+
+        <script>
+            prompt('몇 명이 참가하나요?');
+
+            const number = parseInt(prompt('몇 명이 참가하나요?')) //promt
+            console.log('number', number)
+            alert(number); //alert
+            const yesOrNo = confirm('맞나요?') //confirm
+
+
+            //html태그를 가져오는것(선택하는법) 
+            //document.querySelector('선택자')  
+            //태그를 변수에 넣을때 앞에 $붙이기, 여러개 태그를 동시에 선택할때는 $$(2개)
+            const $input = document.querySelector('input')
+            console.log($input)
+
+            //태그가 여러 개 일때
+            document.querySelectorAll
+        
+            // id는 한번만 사용 자바스크립트가 인식 못함, 특정 태그만 찾기
+            document.querySelector('#아이디'); //선택자로 찾기
+
+            // 동시에 같은 태그를 찾기, querySelctor를 사용하면 하나만 선택됨
+            document.querySelectorAll('.클래스');
+
+            //어떤 태그안에 들어있는 다른태그 선택
+            document.querySelector('선택자 내부선택자');
+
+
+            //태그에 이벤트 달기, html이나 자바스크립트와 상호작용
+            //태그.addEventListener('이벤트이름', 리스너함수), 리스너함수또는 콜백함수
+            document.querySelector('input').addEventListener('input', function(){
+                console.log('글자 입력');
+            });
+            document.querySelector('button').addEventListener('click', function(){
+                console.log('버튼 클릭');
+            })
+            
+            //함수 호출
+            const onClick = function(){
+                console.log('버튼 클릭');
+            };
+            document.querySelector('button').addEventListener('click', onClick); 
+            
+            //화살표 함수 
+            document.querySelector('input').addEventListener('input',() => {
+                console.log('버튼 클릭');
+            });
+            //화살표함수랑 function사용 다른점은 this배울때...알려준데요
+            
+
+            
+
+
+    
+        
+
+    
+
+
+           
+    
+
+        </script>
+    </body>
+</html>
